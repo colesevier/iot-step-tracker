@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IoT Step Tracker
 
 A simple multi-node IoT project that turns a phone into a motion sensor and visualizes activity patterns using a FastAPI backend and a browser-based dashboard.
@@ -84,3 +85,6 @@ curl -X POST http://127.0.0.1:8000/data
 -H "Content-Type: application/json"
 -d '{"device_id":"phone1","steps":10,"timestamp":"2025-01-01T10:00:00"}'
 
+=======
+# iot-step-tracker
+>>>>>>> a7a250df9b4bed780dfffdba306c906e915f8004
