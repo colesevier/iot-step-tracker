@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phone Step Client</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Phone Step Client (Browser)</h1>
+
+  <div class="panel">
+    <label for="deviceId"><strong>Device ID:</strong></label>
+    <input id="deviceId" type="text" value="iphone_browser_1" />
+  </div>
+
+  <p id="status">Tap “Enable Motion” to start.</p>
+
+  <div class="button-row">
+    <button id="permBtn">Enable Motion</button>
+    <button id="startBtn" disabled>Start</button>
+    <button id="stopBtn" disabled>Stop</button>
+    <button id="resetBtn" disabled>Reset Session</button>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-label">Total steps</div>
+      <div class="stat-value" id="totalSteps">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Session time</div>
+      <div class="stat-value" id="sessionTime">00:00</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Distance (km)</div>
+      <div class="stat-value" id="distanceKm">0.00</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Calories (est.)</div>
+      <div class="stat-value" id="calories">0</div>
+    </div>
+  </div>
+
+  <p>Unsent steps buffer: <span id="unsentSteps">0</span></p>
+  <p>Last alert: <span id="lastAlert">–</span></p>
+
+  <script src="phone.js"></script>
+</body>
+</html>

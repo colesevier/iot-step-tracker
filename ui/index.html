@@ -9,10 +9,28 @@
 <body>
     <h1>Activity Dashboard</h1>
 
-    <label for="userSelect">Select User:</label>
-    <select id="userSelect"></select>
+    <div class="panel">
+      <label for="userSelect"><strong>Select User:</strong></label>
+      <select id="userSelect"></select>
+      <button id="resetUserBtn">Reset User Data</button>
+    </div>
 
     <canvas id="activityChart"></canvas>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-label">Total steps</div>
+        <div class="stat-value" id="dashTotalSteps">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Session duration</div>
+        <div class="stat-value" id="dashDuration">00:00</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Avg steps / min</div>
+        <div class="stat-value" id="dashAvgSpm">0</div>
+      </div>
+    </div>
 
     <script src="dashboard.js"></script>
 </body>
