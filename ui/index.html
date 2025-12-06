@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
     <title>Activity Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
     <h1>Activity Dashboard</h1>
 
-    <div class="panel">
-      <label for="userSelect"><strong>Select User:</strong></label>
-      <select id="userSelect"></select>
-      <button id="resetUserBtn">Reset User Data</button>
+    <div class="controls">
+        <label for="userSelect">Select User:</label>
+        <select id="userSelect"></select>
+        <button id="refreshBtn">Refresh</button>
+    </div>
+
+    <div id="analytics" class="analytics-grid">
+        <div class="metric-card">
+            <div class="metric-title">Current Pace</div>
+            <div class="metric-value" id="paceValue">— spm</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-title">Corrected Steps (Today)</div>
+            <div class="metric-value" id="correctedSteps">—</div>
+            <div class="metric-sub" id="rawSteps">raw: —</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-title">Calories (Today)</div>
+            <div class="metric-value" id="caloriesValue">— kcal</div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-title">Predicted Daily Steps</div>
+            <div class="metric-value" id="predictionValue">—</div>
+        </div>
     </div>
 
     <canvas id="activityChart"></canvas>
-
-    <div class="stats-grid">
-      <div class="stat">
-        <div class="stat-label">Total steps</div>
-        <div class="stat-value" id="dashTotalSteps">0</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Session duration</div>
-        <div class="stat-value" id="dashDuration">00:00</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Avg steps / min</div>
-        <div class="stat-value" id="dashAvgSpm">0</div>
-      </div>
-    </div>
 
     <script src="dashboard.js"></script>
 </body>
