@@ -1,4 +1,5 @@
 # IoT Step Tracker
+Cole Sevier and Archit Garg 
 
 Turn a phone into a motion sensor, collect steps on a FastAPI backend, and visualize activity with a web dashboard.
 
