@@ -6,7 +6,6 @@ let dataTimer = null;
 let analyticsTimer = null;
 
 async function loadUsers() {
-  // For now use a fixed list (you can make it dynamic later)
   const users = ["phone_1", "iphone_browser_1", "phone1", "phone2"];
   const sel = document.getElementById("userSelect");
   sel.innerHTML = "";
